@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  min-height: 100vh;
+  background: #2f363e;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+/*Alarm Clock style*/
+.alarm{
+    border: 2px solid rgba(0,0,0,0.25);
+    border-radius: 8px;
+    background: #2f363e;
+    box-shadow: 10px 50px 70px rgba(0,0,0,0.25),
+    inset 5px 5px 10px rgba(0,0,0,0.5),
+    inset 5px 5px 20px rgba(255,255,255,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+    margin-left: 40px;
+    
+}
+
+.datetime{
+    color: #fff;
+    background: #10101E;
+    font-family: "Segoe UI", sans-serif;
+    width: 400px;
+    padding: 15px 20px;
+    transition: 0.5s;
+    transition-property: all;
+    
+}
+
+.datetime:hover{
+    background: rgba(0,0,0,0.5);
+    box-shadow: 10px 50px 70px rgba(0,0,0,0.25),
+    inset 5px 5px 10px rgba(0,0,0,0.5),
+    inset 5px 5px 20px rgba(255,255,255,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);;
+    border-radius: 5px;
+}
+
+.date{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.time{
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time span:not(:last-child){
+    position: relative;
+    max-width: 0 6px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.time span:last-child{
+    background: #10101E;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+
+hr{
+    border: 2px solid  rgb(0, 0, 0);
+    margin: 20px auto;
+    background: #2f363e;
+    box-shadow: 10px 50px 70px rgba(0,0,0,0.25),
+    inset 5px 5px 10px rgba(0,0,0,0.5),
+    inset 5px 5px 20px rgba(255,255,255,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+}
+
+.setAlarm{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.column select{
+    background: #10101E;
+    color: #fff;
+    text-align: center;
+    padding: 8px 4px;
+    border: 2px solid rgba(0,0,0,0.25);
+    border-radius: 18px;
+    box-shadow: 10px 50px 70px rgba(0,0,0,0.25),
+    inset 5px 5px 10px rgba(0,0,0,0.5),
+    inset 5px 5px 20px rgba(255,255,255,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+}
+
+
+#btn-setAlarm, .btn-delete, #stopAlarm{
+    padding: 5px;
+    color: #fff;
+    background: #10101E;
+    border: 2px solid rgba(0,0,0,0.25);
+    border-radius: 18px;
+    box-shadow: 10px 50px 70px rgba(0,0,0,0.25),
+    inset 5px 5px 10px rgba(0,0,0,0.5),
+    inset 5px 5px 20px rgba(255,255,255,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+}
+
+#stopAlarm{
+    visibility: hidden;
+    width: 100px;
+    margin: 0 34%;
+}
+
+.btn-delete{
+    margin-left: 50px;
+}
+
+#btn-setAlarm:hover, .btn-delete:hover, #stopAlarm:hover{
+    cursor: pointer;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 0 30px rgba(255,255,255,0.2);
+}
+
+h3{
+    color: #fff;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.alarmList{
+    color: #fff;
+    margin: 14px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.alarmLog{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px auto;
+}
+
+
+
+
+/*Analog Clock Style */
+.container{
+  position: relative;
+  background: #2f363e;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 250px;
+ 
+}
+
+.clock{
+  position: relative;
+  width: 450px;
+  height: 450px;
+  background: #2f363e;
+  border-radius: 50%;
+  box-shadow: 10px 50px 70px rgba(0,0,0,0.25),
+  inset 5px 5px 10px rgba(0,0,0,0.5),
+  inset 5px 5px 20px rgba(255,255,255,0.2),
+  inset -5px -5px 15px rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock::before{
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #2f363e;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  z-index: 100000;
+}
+
+.clock span{
+  position: absolute;
+  inset: 20px;
+  color: #fff;
+  text-align: center;
+  transform: rotate(calc(30deg * var(--i)));  /*360 / 12 = 30deg */
+}
+
+.clock span b{
+  font-size: 2em;
+  opacity: 0.25;
+  font-weight: 600;
+  display: inline-block;
+  transform: rotate(calc(-30deg * var(--i)));
+}
+
+.circle{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 2px solid rgba(0,0,0,0.25);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 10;
+}
+
+.circle i{
+  position: absolute;
+  width: 6px;
+  height: 50%;
+  background: var(--clr);
+  opacity: 0.75;
+  transform-origin: bottom;
+  transform: scaleY(0.5);
+}
+
+.circle:nth-child(1) i{
+  width: 2px;
+}
+
+.circle:nth-child(2) i{
+  width: 6px;
+}
+
+.circle2{
+  width: 240px;
+  height: 240px;
+  z-index: 9;
+}
+
+.circle3{
+  width: 180px;
+  height: 180px;
+  z-index: 8;
+}
+.circle::before{
+  content: '';
+  position: absolute;
+  top: -8.5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--clr);
+  box-shadow: 0 0 10px var(--clr),
+  0 0 40px var(--clr);
+}
+
+
+
+
+/* digital clock style */
+
+#ytime {
+  margin-bottom: -80px;
+  display: flex;
+  transform: translateY(15px);
+  padding: 10px 10px;
+  font-size: 2em;
+  font-weight: 600;
+  border: 2px solid rgba(0,0,0,0.5);
+  border-radius: 40px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5),
+  inset 5px 5px 20px rgba(255,255,255,0.2),
+  inset -5px -5px 15px rgba(0,0,0,0.75);
+  margin-left: 15px;
+}
+
+#ytime div {
+  position: relative;
+  width: 60px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--clr);
+}
+
+#ytime div:nth-child(1)::after,
+#ytime div:nth-child(2)::after {
+  content: ':';
+  position: absolute;
+  right: -4px;
+}
+
+#ytime div:last-child {
+  font-size: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+#ytime div:nth-child(2)::after {
+  animation: animate 1s steps(1) infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+/* Make Responsive */
+
+@media screen and (max-width: 768px) {
+    .container {
+      border-radius: 10px;
+    }
+    
+    .clock {
+      width: 300px;
+      height: 300px;
+    }
+    
+    .clock span {
+      inset: 15px;
+    }
+    
+    .circle {
+      width: 200px;
+      height: 200px;
+    }
+    
+    .circle i {
+      height: 40%;
+    }
+    
+    .circle:nth-child(1) i {
+      width: 1px;
+    }
+    
+    .circle:nth-child(2) i {
+      width: 3px;
+    }
+    
+    .circle2 {
+      width: 150px;
+      height: 150px;
+    }
+    
+    .circle3 {
+      width: 100px;
+      height: 100px;
+    }
+    
+    .circle::before {
+      top: -6.5px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .container {
+      border-radius: 0;
+    }
+    
+    .clock {
+      width: 200px;
+      height: 200px;
+    }
+    
+    .clock span {
+      inset: 10px;
+    }
+    
+    .circle {
+      width: 120px;
+      height: 120px;
+    }
+    
+    .circle i {
+      height: 30%;
+    }
+    
+    .circle:nth-child(1) i {
+      width: 1px;
+    }
+    
+    .circle:nth-child(2) i {
+      width: 2px;
+    }
+    
+    .circle2 {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .circle3 {
+      width: 60px;
+      height: 60px;
+    }
+    
+    .circle::before {
+      top: -4.5px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+  #ytime {
+    font-size: 1.5em;
+    padding: 5px 5px;
+    margin-left: 10px;
+  }
+
+  #ytime div {
+    width: 50px;
+  }
+
+  #ytime div:last-child {
+    font-size: 0.4em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ytime {
+    font-size: 1em;
+    padding: 2px 2px;
+    margin-left: 5px;
+  }
+
+  #ytime div {
+    width: 40px;
+  }
+
+  #ytime div:last-child {
+    font-size: 0.3em;
+  }
+}
+
+
+
