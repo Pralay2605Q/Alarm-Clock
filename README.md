@@ -96,7 +96,7 @@ Create an alarm clock. Use ONLY vanilla javascript, no libraries or frameworks a
 
 # LINKS
 
-<a href = ""> <b>LIVE PRODUCT</b> </a>  &nbsp; <a href = ""> <b>CODE</b> </a> <br>
+<a href = "https://pralay2605q.github.io/Alarm-Clock/"> <b>LIVE PRODUCT</b> </a>  &nbsp; <a href = "https://github.com/Pralay2605Q/Alarm-Clock"> <b>CODE</b> </a> <br>
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 <br>
